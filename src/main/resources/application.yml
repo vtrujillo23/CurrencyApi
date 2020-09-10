@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://currencyapi:Master01@cluster0.mxqcp.mongodb.net/blacklist?retryWrites=true&w=majority
+      uri: mongodb+srv://currencyapi:<password>@cluster0.mxqcp.mongodb.net/blacklist?retryWrites=true&w=majority
 swagger:
   title: "test"
   description: "test"
