@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/ip?127.0.0.1"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "ipCountryInfo.json",
+    "headers": {
+      "Content-Type": "application/json",
+      "Mocked": "1"
+    }
+  }
+}

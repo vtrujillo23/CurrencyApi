@@ -1,0 +1,60 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.3.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	id 'jacoco'
+}
+
+group = 'com.company.currency'
+version = '0.0.1'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+	compile group: 'javax.validation', name: 'validation-api', version: '1.1.0.Final'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign',version:'2.2.5.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-openfeign-core', version: '2.2.5.RELEASE'
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+	
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.6.2'
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.2'
+	testCompile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo'
+	testCompile group: 'com.github.tomakehurst', name: 'wiremock', version: '1.46'
+	
+}
+
+test {
+    finalizedBy jacocoTestReport 
+}
+jacocoTestReport {
+    dependsOn test 
+}
+
+test {
+	useJUnitPlatform()
+}
+
+
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/jacocoReport")
+}

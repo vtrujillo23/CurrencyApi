@@ -1,0 +1,9 @@
+{
+  "currencies": [
+    {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€"
+    }
+  ]
+}

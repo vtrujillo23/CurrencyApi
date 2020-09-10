@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/latest?access_key=af03a4eec76176d013c22f9e518462f4&symbols=EUR"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "countryCurrency.json",
+    "headers": {
+      "Content-Type": "application/json",
+      "Mocked": "1"
+    }
+  }
+}

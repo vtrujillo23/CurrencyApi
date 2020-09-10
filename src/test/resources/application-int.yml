@@ -1,0 +1,17 @@
+spring:
+  profiles: int
+  data:
+     mongodb:
+        user: test
+        password: test
+        uri: mongodb://localhost:27017/blacklist
+      
+server:
+  servlet:
+    context-path: /ws/api/currencyapi/v1/
+    
+info:
+ countryip: http://localhost:8009/
+ infocountry: http://localhost:8009/rest/v2/
+ infocurrency: http://localhost:8009/api/
+ access_key: af03a4eec76176d013c22f9e518462f4

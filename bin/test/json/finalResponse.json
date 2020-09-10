@@ -1,0 +1,11 @@
+{
+    "ip": "0.0.0.0",
+    "isoCode": "CO",
+    "countryName": "Colombia",
+    "currency": [
+        {
+            "currency": "COP",
+            "eurValue": "0.00023"
+        }
+    ]
+}

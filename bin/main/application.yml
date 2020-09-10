@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://currencyapi:Master01@cluster0.mxqcp.mongodb.net/blacklist?retryWrites=true&w=majority
+swagger:
+  title: "test"
+  description: "test"
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /doc    
+server:
+  servlet:
+    context-path: /ws/api/currencyapi/v1/
+    
+info:
+ countryip: https://api.ip2country.info/
+ infocountry: https://restcountries.eu/rest/v2/
+ infocurrency: http://data.fixer.io/api/
+ access_key: af03a4eec76176d013c22f9e518462f4
